@@ -11,7 +11,24 @@ import uploadRoutes from './routes/upload.js'
 dotenv.config();
 
 const app = express();
-app.use(cors({ origin: 'https://astounding-palmier-0dbde4.netlify.app', credentials: true }));
+const allowedOrigins = [
+  'https://astounding-palmier-0dbde4.netlify.app',
+  'http://localhost:5173'
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 

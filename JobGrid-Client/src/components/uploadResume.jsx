@@ -13,6 +13,7 @@ const UploadResume = ({ title, onUploadSuccess }) => {
 
       <UploadButton
         endpoint="resumeUploader"
+        url="https://jobgrid-d5gg.onrender.com/api/uploadthing"
         headers={() => {
           const token = localStorage.getItem("token");
           return token ? { Authorization: `Bearer ${token}` } : {};
