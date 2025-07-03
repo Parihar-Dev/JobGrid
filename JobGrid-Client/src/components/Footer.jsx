@@ -19,13 +19,13 @@ function Footer() {
                     <a href="#" aria-label="Facebook">
                     <img src={facebook} alt="Facebook" className="w-5 h-5" />
                     </a>
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/rahulparihar0203/" aria-label="LinkedIn">
                     <img src={linkedin} alt="LinkedIn" className="w-5 h-5" />
                     </a>
                     <a href="#" aria-label="YouTube">
                     <img src={youtube} alt="YouTube" className="w-5 h-5" />
                     </a>
-                    <a href="#" aria-label="Github">
+                    <a href="https://github.com/Parihar-Dev" aria-label="Github">
                     <img src={github} alt="Github" className="w-5 h-5" />
                 </a>
             </div>
