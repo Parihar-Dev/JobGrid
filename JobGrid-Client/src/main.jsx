@@ -5,6 +5,14 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <UploadThingProvider
+      config={{
+        uploadthingUrl: import.meta.env.PROD
+          ? "https://jobgrid-d5gg.onrender.com/api/uploadthing"
+          : "http://localhost:3000/api/uploadthing",
+      }}
+    >
+      <App />
+    </UploadThingProvider>
   </StrictMode>,
 )
