@@ -16,12 +16,6 @@ function Sidebar() {
       isActive ? 'bg-blue-100 text-blue-600 font-semibold' : 'text-gray-800 hover:bg-gray-100'
   }`;
 
-  const handleLogout = () => {
-    localStorage.removeItem('token')
-    setIsAuthenticated(false)
-    navigate('/')
-  };
-
   return (
     <div className="w-full pr-3 bg-white flex flex-col justify-between min-h-screen">
       <div className="mt-4">
@@ -33,7 +27,7 @@ function Sidebar() {
         ))}
       </div>
 
-      <div onClick={handleLogout} className="flex flex-row items-center gap-3 py-2 px-4 mb-4 cursor-pointer hover:bg-red-100 rounded-lg">
+      <div className="flex flex-row items-center gap-3 py-2 px-4 mb-4 cursor-pointer hover:bg-red-100 rounded-lg">
         <img src={LogoutIcon} className="w-5 h-5" />
         <h2 className="font-inter text-lg">Logout</h2>
       </div>
