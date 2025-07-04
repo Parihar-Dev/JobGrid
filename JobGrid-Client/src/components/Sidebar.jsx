@@ -26,11 +26,6 @@ function Sidebar() {
           </NavLink>
         ))}
       </div>
-
-      <div className="flex flex-row items-center gap-3 py-2 px-4 mb-4 cursor-pointer hover:bg-red-100 rounded-lg">
-        <img src={LogoutIcon} className="w-5 h-5" />
-        <h2 className="font-inter text-lg">Logout</h2>
-      </div>
     </div>
   );
 }
